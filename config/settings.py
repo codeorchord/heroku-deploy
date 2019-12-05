@@ -19,11 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
+from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$n^h(@=t-qcgt-o1c_xhkjodgs9*r%w)4sdoj%4of3+-r6x^^l'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -141,3 +142,7 @@ AUTH_USER_MODEL = 'accounts.User'
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = 'boards:index'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.setting(locals())
