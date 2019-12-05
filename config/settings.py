@@ -145,4 +145,4 @@ LOGIN_REDIRECT_URL = 'boards:index'
 
 # Configure Django App for Heroku.
 import django_heroku
-django_heroku.setting(locals())
+django_heroku.settings(locals())

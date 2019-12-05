@@ -132,6 +132,15 @@ origin  https://github.com/codeorchord/heroku-deploy.git (push)
 
   이곳에 SECRET_KEY를 등록한다.
 
+#### 배포
+
+```bash
+$ git add .
+$ git commit -m 'heroku deploy'
+$ git push heroku master
+
+```
+
 
 
 
