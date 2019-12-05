@@ -139,7 +139,34 @@ $ git add .
 $ git commit -m 'heroku deploy'
 $ git push heroku master
 
+# migrate
+$ heroku run python manage.py migrate
 ```
+
+- 포트 에러시
+
+  앱 대시보드 > More > Run console
+
+  ```bash
+  $ python manage.py migrate
+  $ python manange.py createsuperuser
+  ```
+
+#### 기동시키기
+
+로컬 bash 에서
+
+```bash
+$ heroku open
+```
+
+:point_right:https://mulcamp-deploy-jh.herokuapp.com/
+
+***DONE!!!***
+
+#### PostgreSQL 상태 확인
+
+앱 대시보드 > Overview > Heroku Postgres
 
 
 
